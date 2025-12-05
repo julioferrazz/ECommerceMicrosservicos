@@ -139,3 +139,4 @@ D:\Projetos estudos\ECommerceMicrosservicos\src\EstoqueService\obj\Debug\net8.0\
 D:\Projetos estudos\ECommerceMicrosservicos\src\EstoqueService\obj\Debug\net8.0\EstoqueService.pdb
 D:\Projetos estudos\ECommerceMicrosservicos\src\EstoqueService\obj\Debug\net8.0\EstoqueService.genruntimeconfig.cache
 D:\Projetos estudos\ECommerceMicrosservicos\src\EstoqueService\obj\Debug\net8.0\ref\EstoqueService.dll
+D:\Projetos estudos\ECommerceMicrosservicos\src\EstoqueService\obj\Debug\net8.0\EstoqueService.sourcelink.json

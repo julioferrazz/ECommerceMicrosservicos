@@ -10,3 +10,4 @@ D:\Projetos estudos\ECommerceMicrosservicos\src\Shared\obj\Debug\net8.0\Shared.d
 D:\Projetos estudos\ECommerceMicrosservicos\src\Shared\obj\Debug\net8.0\refint\Shared.dll
 D:\Projetos estudos\ECommerceMicrosservicos\src\Shared\obj\Debug\net8.0\Shared.pdb
 D:\Projetos estudos\ECommerceMicrosservicos\src\Shared\obj\Debug\net8.0\ref\Shared.dll
+D:\Projetos estudos\ECommerceMicrosservicos\src\Shared\obj\Debug\net8.0\Shared.sourcelink.json

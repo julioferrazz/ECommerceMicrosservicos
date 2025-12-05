@@ -22,9 +22,9 @@ namespace VendasService.Data
                 entity.Property(e => e.Status).HasConversion<string>();
 
                 entity.HasMany(e => e.Itens)
-     .WithOne(i => i.Pedido)
-     .HasForeignKey(i => i.PedidoId)
-     .OnDelete(DeleteBehavior.Cascade);
+                .WithOne(i => i.Pedido)
+                .HasForeignKey(i => i.PedidoId)
+                .OnDelete(DeleteBehavior.Cascade);
             });
             modelBuilder.Entity<ItemPedido>(entity =>
             {

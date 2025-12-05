@@ -17,12 +17,26 @@ namespace ApiGateway.Controllers
         }
 
         [HttpPost("login")]
-        public ActionResult<LoginResponse> Login(LoginRequest request)
+        public ActionResult<LoginResponse> Login([FromBody] LoginRequest request)
         {
+            Console.WriteLine($"Username recebido: {request?.Username}");
+            Console.WriteLine($"Password recebido: {request?.Password}");
+
+            if (request == null)
+            {
+                return BadRequest(new { message = "Request está null" });
+            }
+
+            if (string.IsNullOrEmpty(request.Username) || string.IsNullOrEmpty(request.Password))
+            {
+                return BadRequest(new { message = "Username ou Password vazios" });
+            }
+
             if (ValidarUsuario(request.Username, request.Password))
             {
                 var token = GerarToken(request.Username);
                 var expiresAt = DateTime.UtcNow.AddHours(2);
+
                 return Ok(new LoginResponse
                 {
                     Token = token,
@@ -30,6 +44,7 @@ namespace ApiGateway.Controllers
                     ExpiresAt = expiresAt
                 });
             }
+
             return Unauthorized(new { message = "Credenciais inválidas" });
         }
 
@@ -40,7 +55,7 @@ namespace ApiGateway.Controllers
 
         private string GerarToken(string username)
         {
-            var jwtKey = _configuration["Jwt:Key"] ?? "ChaveSecretaSuperSegura123456789012";
+            var jwtKey = _configuration["Jwt:Key"] ?? "minhasecretaextremamentelonga1234567890123456";
             var key = Encoding.ASCII.GetBytes(jwtKey);
             var tokenDescriptor = new SecurityTokenDescriptor
             {

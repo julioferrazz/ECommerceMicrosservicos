@@ -11,7 +11,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<VendasContext>(options =>
  options.UseSqlServer(
  builder.Configuration.GetConnectionString("DefaultConnection")));
-var jwtKey = builder.Configuration["Jwt:Key"] ?? "testechavesecreta123";
+var jwtKey = builder.Configuration["Jwt:Key"] ?? "minhasecretaextremamentelonga1234567890123456";
 var key = Encoding.ASCII.GetBytes(jwtKey);
 
 builder.Services.AddAuthentication(options =>
